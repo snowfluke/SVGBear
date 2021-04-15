@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐻 SVG-Bear</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🐻 SVG-Bear!</h1>
+        <p>An automatic tool for recoloring a batch of SVG files!</p>
+    </header>
+    <span class="line"></span>
+    <div class="topBar">
+            <input style="display: none;" onchange="handleChange(this)" type="color" class="cPicker" name="cPicked">
+            <div onclick="cPicker.click()" class="colorPicker"></div>
+            <span spellcheck="false" oninput="handleTextChange(this)" class="colored" contenteditable="true">#FFFFFF</span>
+        <button onclick="exportSVG()">Download SVG</button>
+        <button class="resetBtn" onclick="resetAll(event)">Reset</button>
+    </div>
+    <div id="work">
+    </div>
+    <form >
+        <input class="inputBtn" type="file" multiple accept="image/svg+xml" onchange="handleFiles(this.files)">
+    </form>
+    <span class="line"></span>
+    <canvas id="render" style="display: none;" width="100%" height="100%"></canvas>
+    <div id="png-container"></div>
+    <footer>
+        Made by <a href="https://snowfluke.github.io/">Snowfluke</a> | Open Source <a>Code</a>
+    </footer>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="jszip.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+body {
+    background-color: dodgerblue;
+    font-size: 1rem;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 00.5rem 1rem;
+    margin: 0;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: #fff;
+    font-weight: bold;
+}
+
+#work {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin: 15px 0;
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    min-height:250px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 110px));
+    justify-content: center;
+    grid-gap: 5px;
+    background: url('bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.line {
+    width: 60%;
+    border-radius:  5px;
+    align-self: center;
+    border-bottom: 1px solid #fff;
+    margin: 10px 0;
+}
+
+.colorPicker {
+    width:25px;
+    height:25px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 3px 1px 1px rgba(0,0,0,0.4);
+}
+
+.action {
+    background-color: #446B91 !important;
+}
+
+.colored {
+    font-weight: bold;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 2.5px 10px;
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topBar > * {
+    margin: 0 5px;
+}
+
+.topBar button {
+    margin-left: 50px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.item {
+    background-color:#fff;
+    padding:10px;
+    height: 100px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+button, input[type=file]{
+    padding: 0.5rem 0.7rem;
+    color: #fff;
+    border-radius: 5px;
+    border:1px solid #fff;
+    background-color: Transparent;
+    outline: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover, input[type=file]:hover{
+    background-color: rgb(13, 115, 218);
+}
