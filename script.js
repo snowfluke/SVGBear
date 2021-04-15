@@ -73,12 +73,14 @@ function handleFiles(fileList){
 function resetAll(e){
    e.preventDefault()
    
+   svgFileName = []
    workArea.innerHTML = ""
    workArea.style.background = 'url(bg.svg) center no-repeat';
 
 }
 
 function exportSVG(){
+    if(!svgFileName) return;
     const zip = new JSZip();
     const svgFiles = Array.from(_('.item')).map( el => el.innerHTML)
     
